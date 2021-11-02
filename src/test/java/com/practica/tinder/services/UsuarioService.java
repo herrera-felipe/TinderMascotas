@@ -17,6 +17,9 @@ public class UsuarioService {
 	@Autowired // la variable la inicializa el servidor de aplicaciones
 	private UsuarioRepositorio usuarioRepositorio;
 
+	/*
+	 * Usa el repositorio de usuario para persistir un nuevo registro en la bd
+	 */
 	public void registrarUsuario(String nombre, String apellido, String mail, String clave) throws ErrorServicio {
 
 		validarDatos(nombre, apellido, mail, clave);
@@ -35,6 +38,11 @@ public class UsuarioService {
 		usuarioRepositorio.save(usuario);
 	}
 
+	/*
+	 * Recibe el id del usuario que quiere modoficar su cuenta
+	 * usa el repositorio del usuario para buscar el usurio por medio del id
+	 * y si todo esta ok setea los nuevos valores y persiste en la bd.
+	 */
 	public void modificarUsuario(String id, String nombre, String apellido, String mail, String clave)
 			throws ErrorServicio {
 
@@ -60,6 +68,7 @@ public class UsuarioService {
 		}
 	}
 
+	
 	public void deshabilitarUsuario(String id) throws ErrorServicio {
 		// Buscamos el usuario en la bd por medio del repositorio
 		Optional<Usuario> respuesta = usuarioRepositorio.findById(id);
