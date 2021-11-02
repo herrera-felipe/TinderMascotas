@@ -28,10 +28,10 @@ public class Voto {
 
 	// Hacemos la relacion entre entidades
 	@ManyToOne
-	private Mascota mascotaOriginaVoto;
+	private Mascota mascota1; // Mascota que vota
 	
 	@ManyToOne
-	private Mascota mascotaRecibeVoto;
+	private Mascota mascota2; // mascota que recibe voto
 	
 	
 	public String getId() {
@@ -58,20 +58,20 @@ public class Voto {
 		this.respuesta = respuesta;
 	}
 
-	public Mascota getMascotaOriginaVoto() {
-		return mascotaOriginaVoto;
+	public Mascota getMascota1() {
+		return mascota1;
 	}
 
-	public void setMascotaOriginaVoto(Mascota mascotaOriginaVoto) {
-		this.mascotaOriginaVoto = mascotaOriginaVoto;
+	public void setMascota1(Mascota mascota1) {
+		this.mascota1 = mascota1;
 	}
 
-	public Mascota getMascotaRecibeVoto() {
-		return mascotaRecibeVoto;
+	public Mascota getMascota2() {
+		return mascota2;
 	}
 
-	public void setMascotaRecibeVoto(Mascota mascotaRecibeVoto) {
-		this.mascotaRecibeVoto = mascotaRecibeVoto;
+	public void setMascota2(Mascota mascota2) {
+		this.mascota2 = mascota2;
 	}
 	
 	
