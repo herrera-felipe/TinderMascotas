@@ -12,9 +12,9 @@ import com.practica.tinder.entitys.Voto;
 @Repository
 public interface VotoRepositorio extends JpaRepository<Voto, String> {
 
-	@Query("SELECT c FROM Voto c WHERE c.mascotaOriginaVoto.id = :id ORDER BY c.fecha DESC")
+	@Query("SELECT c FROM Voto c WHERE c.mascota1.id = :id ORDER BY c.fecha DESC")
 	public List<Voto> buscarVotosPropios(@Param("id") String id);
 	
-	@Query("SELECT c FROM Voto c WHERE c.mascotaRecibeVoto.id = :id ORDER BY c.fecha DESC")
+	@Query("SELECT c FROM Voto c WHERE c.mascota2.id = :id ORDER BY c.fecha DESC")
 	public List<Voto> buscarVotosRecibidos(@Param("id") String id);
 }
