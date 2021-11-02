@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.practica.tinder.entitys.Mascota;
 import com.practica.tinder.entitys.Usuario;
@@ -12,6 +13,7 @@ import com.practica.tinder.errores.ErrorServicio;
 import com.practica.tinder.repositories.MascotaRepositorio;
 import com.practica.tinder.repositories.UsuarioRepositorio;
 
+@Service
 public class MascotaService {
 
 	@Autowired
